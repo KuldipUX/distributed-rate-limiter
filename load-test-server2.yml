@@ -1,0 +1,11 @@
+config:
+  target: "http://localhost:3001"
+  phases:
+    - duration: 1
+      arrivalRate: 100
+
+scenarios:
+  - name: "Rate Limiter Load Test"
+    flow:
+      - get:
+          url: "/limited"
